@@ -5,6 +5,35 @@
     <title>Rate Now test</title>
 </head>
 <body>
-    <p>Get your pdf chart <a href="/pdf">here</a></p>
+    <p>Test Rate Now</p>
+    <p>EndPoints</p>
+    <ul>
+        <li>POST a new Graph in http://localhost:8080/testgraph <pre>curl -X POST \
+  http://localhost:8080/testgraph \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 104' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:8080' \
+  -H 'Postman-Token: 81e8dd81-236f-41a8-aa09-46f3c124837b,5a35463e-9735-455d-8b2d-2ef5df9d162b' \
+  -H 'User-Agent: PostmanRuntime/7.19.0' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "title": "My test Graph",
+    "valuesToShow": [
+        3,
+        5,
+        8,
+        1
+    ]
+}'</pre></li>
+        <li>GET an id Graph information. By Default Graph id=1 <a href="/testgraph/1"> here</a></li>
+        <li>To generate the pdf and png chart <a href="/pdf/1">here</a>. You can find the files generated into
+            <i>src/main/resources/files </i>
+            By default you generate the chart with the id=1, but you can change it and you will generate a new pdf and png. </li>
+    </ul>
+
 </body>
 </html>
