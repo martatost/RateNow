@@ -29,7 +29,7 @@ public class TestGraph implements Serializable{
 	@ElementCollection
 	@CollectionTable(name="graphinformation",
 					joinColumns = @JoinColumn(name="testgraph_id"))
-	private List<String> valuesToShow;
+	private List<Integer> valuesToShow;
 
 	
 	
@@ -37,7 +37,7 @@ public class TestGraph implements Serializable{
 		super();
 	}
 
-	public TestGraph(Long id, String title, List<String> valuesToShow) {
+	public TestGraph(Long id, String title, List<Integer> valuesToShow) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -70,13 +70,13 @@ public class TestGraph implements Serializable{
 
 
 
-	public List<String> getValuesToShow() {
+	public List<Integer> getValuesToShow() {
 		return valuesToShow;
 	}
 
 
 
-	public void setValuesToShow(List<String> valuesToShow) {
+	public void setValuesToShow(List<Integer> valuesToShow) {
 		this.valuesToShow = valuesToShow;
 	}
 
